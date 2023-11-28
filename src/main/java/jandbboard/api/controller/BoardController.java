@@ -1,6 +1,6 @@
 package jandbboard.api.controller;
 
-import jandbboard.api.service.JandBoardService;
+import jandbboard.api.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/")
-public class JandBoardController {
+public class BoardController {
 
-    private final JandBoardService jandBoardService;
+    private final BoardService boardService;
 
     @GetMapping("/test")
     public String getTestBoard(){
         log.debug("##############################################");
         log.debug("test :: getTestBoard() :: {}","hi");
         log.debug("##############################################");
-        return jandBoardService.getTestBoard();
+        return boardService.getTestBoard();
     }
 }

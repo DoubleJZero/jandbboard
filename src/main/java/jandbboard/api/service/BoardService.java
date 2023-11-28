@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 @Service
 @Transactional(readOnly = true)
-public class JandBoardService {
+public class BoardService {
 
     public String getTestBoard(){
         log.debug("##############################################");
